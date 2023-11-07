@@ -15,14 +15,22 @@ def main():
 
         # if the user guessed 26, then tell them they are right
         if alphabet_guess_int == 26:
-            print("{} is right! There are 26 letters in the alphabet!".format(alphabet_guess_string))
+            print(
+                "{} is right! There are 26 letters in the alphabet!".format(
+                    alphabet_guess_string
+                )
+            )
         else:
             # otherwise tell them they are wrong
-            print("{} is wrong! There are 26 letters in the alphabet!".format(alphabet_guess_string))
+            print(
+                "{} is wrong! There are 26 letters in the alphabet!".format(
+                    alphabet_guess_string
+                )
+            )
 
         # get alphabet character
         alphabet_character = input(
-            "Chose a word, and pick a character out of it. Enter it into the program and I will see if it is a vowel or a consonant: "
+            "Choose a word, and pick a character out of it. Enter it into the program and I will see if it is a vowel or a consonant: "
         )
         alphabet_character_str_lower = str.lower(alphabet_character)
 
@@ -39,18 +47,18 @@ def main():
             # if the user enter y, ask how many other vowels are in their word
             word_include_other_vowels = input(
                 (
-                    "Y can be both. Are there are any other vowels in your word including y (yes/no)?"
+                    "Y can be both. Are there any other vowels in your word including y (yes/no)?"
                 )
             )
 
             # if there is more than 1 vowel in their word, y is a consonant
             if word_include_other_vowels == "yes":
-                print("{} is a consonant".format(alphabet_character))
+                print("Usually, {} is a consonant".format(alphabet_character))
             elif word_include_other_vowels == "no":
                 # if there is 1 vowel in their word, y is a vowel
                 print("{} is a vowel".format(alphabet_character))
             else:
-                 # otherwise tell them to say yes or no
+                # otherwise tell them to say yes or no
                 print("Please enter yes or no for this section of the program")
         else:
             # otherwise their letter is a consonant
